@@ -1,0 +1,1012 @@
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 23%/Sample 1/10%PEGPLGANP CVM offset 23.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 23%/Sample 1/10%PEGPLGANP CVM offset 23.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 23%/Sample 1/10%PEGPLGANP CVM offset 23_0001.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 23%/Sample 1/10%PEGPLGANP CVM offset 23_0001.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 23%/Sample 1/10%PEGPLGANP CVM offset 23_0002.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 23%/Sample 1/10%PEGPLGANP CVM offset 23_0002.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 23%/Sample 2/10%PLGANP CVM offset 23.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 23%/Sample 2/10%PLGANP CVM offset 23.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 23%/Sample 2/10%PLGANP CVM offset 23_0001.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 23%/Sample 2/10%PLGANP CVM offset 23_0001.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 23%/Sample 2/10%PLGANP CVM offset 23_0002.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 23%/Sample 2/10%PLGANP CVM offset 23_0002.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 1/10%PEGPLGANP CVM offset 50%.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 1/10%PEGPLGANP CVM offset 50%.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 1/10%PEGPLGANP CVM offset 50.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 1/10%PEGPLGANP CVM offset 50.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 1/10%PEGPLGANP CVM offset 50_0001.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 1/10%PEGPLGANP CVM offset 50_0001.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 1/10%PEGPLGANP CVM offset 50_0002.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 1/10%PEGPLGANP CVM offset 50_0002.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 1/10%PEGPLGANP CVM offset 50_0003.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 1/10%PEGPLGANP CVM offset 50_0003.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 2/10%PLGANP CVM offset 50.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 2/10%PLGANP CVM offset 50.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 2/10%PLGANP CVM offset 50_0.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 2/10%PLGANP CVM offset 50_0.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 2/10%PLGANP CVM offset 50_0001.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/10% PEG PLGA NP/10% PEGPLGANP Offset 50%/Sample 2/10%PLGANP CVM offset 50_0001.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/25% PEG PLGA NP/25% PEGPLGANP Offset 23%/25%PEGPLGANP CVM offset 23.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/25% PEG PLGA NP/25% PEGPLGANP Offset 23%/25%PEGPLGANP CVM offset 23.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/25% PEG PLGA NP/25% PEGPLGANP Offset 23%/25%PEGPLGANP CVM offset 23_0001.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/25% PEG PLGA NP/25% PEGPLGANP Offset 23%/25%PEGPLGANP CVM offset 23_0001.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/25% PEG PLGA NP/25% PEGPLGANP Offset 23%/25%PEGPLGANP CVM offset 23_0002.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/25% PEG PLGA NP/25% PEGPLGANP Offset 23%/25%PEGPLGANP CVM offset 23_0002.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/25% PEG PLGA NP/25% PEGPLGANP Offset 50%/25%PEGPLGANP CVM offset 50.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/25% PEG PLGA NP/25% PEGPLGANP Offset 50%/25%PEGPLGANP CVM offset 50.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/25% PEG PLGA NP/25% PEGPLGANP Offset 50%/25%PEGPLGANP CVM offset 50_0001.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/25% PEG PLGA NP/25% PEGPLGANP Offset 50%/25%PEGPLGANP CVM offset 50_0001.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/25% PEG PLGA NP/25% PEGPLGANP Offset 50%/25%PEGPLGANP CVM offset 50_0002.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/25% PEG PLGA NP/25% PEGPLGANP Offset 50%/25%PEGPLGANP CVM offset 50_0002.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 23%/50%PEGPLGANP CVM offset 23.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 23%/50%PEGPLGANP CVM offset 23.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 23%/50%PEGPLGANP CVM offset 23_0001.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 23%/50%PEGPLGANP CVM offset 23_0001.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 23%/50%PEGPLGANP CVM offset 23_0002.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 23%/50%PEGPLGANP CVM offset 23_0002.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 23%/50%PEGPLGANP CVM offset 23_0003.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 23%/50%PEGPLGANP CVM offset 23_0003.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 50%/CVM/50%PEGPLGANP CVM offset 50.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 50%/CVM/50%PEGPLGANP CVM offset 50.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 50%/CVM/50%PEGPLGANP CVM offset 50_0001.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 50%/CVM/50%PEGPLGANP CVM offset 50_0001.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 50%/CVM/50%PEGPLGANP CVM offset 50_0002.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 50%/CVM/50%PEGPLGANP CVM offset 50_0002.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 50%/water/50%PLGANP water offset 23.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 50%/water/50%PLGANP water offset 23.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 50%/water/50%PLGANP water offset 23_0001.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 50%/water/50%PLGANP water offset 23_0001.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 50%/water/50%PLGANP water offset 50.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 50%/water/50%PLGANP water offset 50.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 50%/water/50%PLGANP water offset 50_0001.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/50% PEG PLGA NP/50% PEGPLGANP Offset 50%/water/50%PLGANP water offset 50_0001.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 23%/Sample 1/PLGANP CVM offset 23% real.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 23%/Sample 1/PLGANP CVM offset 23% real.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 23%/Sample 1/PLGANP CVM offset 23%_0001.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 23%/Sample 1/PLGANP CVM offset 23%_0001.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 23%/Sample 1/PLGANP CVM offset 23%_0002.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 23%/Sample 1/PLGANP CVM offset 23%_0002.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 23%/Sample 2/PLGANP CVM offset 23.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 23%/Sample 2/PLGANP CVM offset 23.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 23%/Sample 2/PLGANP CVM offset 23_0001.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 23%/Sample 2/PLGANP CVM offset 23_0001.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 1/PLGANP CVM_0001.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 1/PLGANP CVM_0001.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 1/PLGANP CVM_0002.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 1/PLGANP CVM_0002.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 1/PLGANP CVM_0003.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 1/PLGANP CVM_0003.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 1/PLGANP CVM_0004.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 1/PLGANP CVM_0004.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 2/PLGANP CVM offset 50.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 2/PLGANP CVM offset 50.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 2/PLGANP CVM offset 50_0001.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 2/PLGANP CVM offset 50_0001.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 2/PLGANP CVM offset 50_0002.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 2/PLGANP CVM offset 50_0002.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
+CMD: /Applications/Fiji/fiji --headless --ij1 --run /Users/Parthiv/Automation/Mosaic Automated/2.0/macros/mosaic_2d_tracker.ijm input='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 2/PLGANP CVM offset 50_0003.oir', output='/Users/Parthiv/Library/CloudStorage/OneDrive-UniversityofPittsburgh/Rohan Lab/NP Confocal Data/10212025/Mosaic Automation Test/Mosaic Test 1/PLGA NP/PLGANP Offset 50%/Sample 2/PLGANP CVM offset 50_0003.csv'
+Macro or script not found:
+ 
+/Applications/Fiji/macros/--ij1
+[ClassLauncher] Error while executing the main method of class 'net.imagej.Main':
+java.lang.RuntimeException: Macro canceled
+	at ij.Macro.abort(Macro.java:76)
+	at ij.IJ.error(IJ.java:853)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:126)
+	at ij.IJ.runMacroFile(IJ.java:177)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1202)
+	at net.imagej.legacy.IJ1Helper$3.call(IJ1Helper.java:1198)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:1132)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:1198)
+	at net.imagej.legacy.LegacyCommandline$Batch.handle(LegacyCommandline.java:210)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:99)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:104)
+	at net.imagej.Main.main(Main.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.scijava.launcher.ClassLauncher.launch(ClassLauncher.java:179)
+	at org.scijava.launcher.ClassLauncher.run(ClassLauncher.java:121)
+	at org.scijava.launcher.ClassLauncher.main(ClassLauncher.java:88)
