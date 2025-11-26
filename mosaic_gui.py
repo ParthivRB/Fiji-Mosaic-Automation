@@ -1,247 +1,216 @@
 #!/usr/bin/env python3
-"""
-Mosaic 2D Batch Runner — minimal GUI to batch-run MosaicSuite Particle Tracker 2D
-on Olympus .oir files via Fiji (headless).
-
-- Recursively scans for *.oir
-- For each file, runs macros/mosaic_2d_tracker.ijm with:
-    input='.../file.oir', output='.../file.csv'
-- Skips files that already have CSVs (default)
-- Shows progress + minimal in-window logs only (NO files written)
-- Supports Cancel
-"""
-
-from pathlib import Path
-import json
+import tkinter as tk
+from tkinter import ttk, filedialog, messagebox
+import subprocess
 import threading
 import time
-import subprocess
-import PySimpleGUI as sg
+from pathlib import Path
+import sys
+import os
+import json
+import signal
 
-# ----------------------------- Constants & Paths -----------------------------
+# ---------------- CONFIGURATION ----------------
+if getattr(sys, 'frozen', False):
+    PROJECT_ROOT = Path(sys.executable).parent
+else:
+    PROJECT_ROOT = Path(__file__).parent.resolve()
 
-PROJECT_ROOT = Path("/Users/Parthiv/Automation/Mosaic Automated/2.0").resolve()
-MACRO_PATH   = PROJECT_ROOT / "macros" / "mosaic_2d_tracker.ijm"
-CONFIG_PATH  = PROJECT_ROOT / "run_config.json"
+MACRO_PATH = PROJECT_ROOT / "mosaic_batch.ijm"
+SETTINGS_FILE = PROJECT_ROOT / "settings.json"
 
-# Fiji launchers we accept (first existing wins)
 FIJI_CANDIDATES = [
     Path("/Applications/Fiji/fiji"),
     Path("/Applications/Fiji.app/Contents/MacOS/ImageJ-macosx"),
-    Path("/Applications/Fiji.app/ImageJ-macosx"),
 ]
 
 def find_fiji():
     for p in FIJI_CANDIDATES:
-        if p.exists():
-            return p
+        if p.exists(): return p
     return None
 
 FIJI = find_fiji()
 
-# Best-effort Mosaic presence (for env check message)
-MOSAIC_CANDIDATES = [
-    Path("/Applications/Fiji/plugins/Mosaic_ToolSuite"),
-    Path("/Applications/Fiji.app/plugins/Mosaic_ToolSuite"),
-]
-def has_mosaic():
-    return any(p.exists() for p in MOSAIC_CANDIDATES)
+# ---------------- GUI CLASS ----------------
+class MosaicApp(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        self.title("Mosaic Automation 2.0")
+        self.geometry("700x550")
+        
+        self.settings = self._load_settings()
+        last_folder = self.settings.get("last_folder", "")
+        
+        self.folder_path = tk.StringVar(value=last_folder)
+        self.status_var = tk.StringVar(value="Ready")
+        self.is_running = False
+        self.stop_event = threading.Event()
+        
+        self._ui()
+        
+        if last_folder:
+            self.after(500, lambda: self._scan_folder(Path(last_folder)))
+        
+        if not FIJI:
+            messagebox.showwarning("Fiji Missing", "Could not find Fiji in /Applications.")
 
-# ----------------------------- Helpers -----------------------------
+    def _load_settings(self):
+        if SETTINGS_FILE.exists():
+            try: return json.loads(SETTINGS_FILE.read_text())
+            except: return {}
+        return {}
 
-def load_config():
-    if CONFIG_PATH.exists():
+    def _save_setting(self, key, value):
+        self.settings[key] = value
+        try: SETTINGS_FILE.write_text(json.dumps(self.settings, indent=2))
+        except: pass
+
+    def _ui(self):
+        main_frame = ttk.Frame(self, padding="20")
+        main_frame.pack(fill="both", expand=True)
+
+        # Input
+        input_frame = ttk.LabelFrame(main_frame, text="Target Folder", padding="10")
+        input_frame.pack(fill="x", pady=(0, 15))
+        ttk.Entry(input_frame, textvariable=self.folder_path).pack(side="left", fill="x", expand=True, padx=(0, 10))
+        ttk.Button(input_frame, text="Browse...", command=self._browse).pack(side="right")
+
+        # Progress
+        prog_frame = ttk.LabelFrame(main_frame, text="Progress", padding="10")
+        prog_frame.pack(fill="x", pady=(0, 15))
+        self.progress = ttk.Progressbar(prog_frame, orient="horizontal", length=100, mode="determinate")
+        self.progress.pack(fill="x", pady=(0, 5))
+        self.lbl_status = ttk.Label(prog_frame, textvariable=self.status_var, foreground="gray")
+        self.lbl_status.pack(anchor="w")
+
+        # Controls
+        btn_frame = ttk.Frame(main_frame)
+        btn_frame.pack(fill="x", pady=10)
+        self.btn_run = ttk.Button(btn_frame, text="RUN BATCH", command=self._start_run)
+        self.btn_run.pack(side="left", fill="x", expand=True, padx=(0, 5))
+        self.btn_stop = ttk.Button(btn_frame, text="STOP", command=self._stop_run, state="disabled")
+        self.btn_stop.pack(side="right", fill="x", expand=True, padx=(5, 0))
+
+        # Log
+        log_lbl = ttk.Label(main_frame, text="Status Log:")
+        log_lbl.pack(anchor="w")
+        log_frame = ttk.Frame(main_frame)
+        log_frame.pack(fill="both", expand=True, pady=(5, 0))
+        scrollbar = ttk.Scrollbar(log_frame)
+        scrollbar.pack(side="right", fill="y")
+        self.log_text = tk.Text(log_frame, height=10, state="disabled", font=("Menlo", 12), yscrollcommand=scrollbar.set)
+        self.log_text.pack(fill="both", expand=True)
+        scrollbar.config(command=self.log_text.yview)
+
+    def _browse(self):
+        start_dir = self.folder_path.get() if os.path.exists(self.folder_path.get()) else "/"
+        p = filedialog.askdirectory(initialdir=start_dir)
+        if p:
+            self.folder_path.set(p)
+            self._save_setting("last_folder", p)
+            self._scan_folder(Path(p))
+
+    def _scan_folder(self, folder):
+        if not folder.exists(): return
+        oirs = list(folder.rglob("*.oir"))
+        csvs = list(folder.rglob("*.csv"))
+        self.status_var.set(f"Found {len(oirs)} .oir files ({len(csvs)} already processed).")
+        self._log(f"📂 Ready: {len(oirs)} files found.")
+
+    def _log(self, msg):
+        self.log_text.config(state="normal")
+        self.log_text.insert("end", f"{msg}\n")
+        self.log_text.see("end")
+        self.log_text.config(state="disabled")
+
+    def _start_run(self):
+        target = self.folder_path.get()
+        if not target or not FIJI: return
+        self._save_setting("last_folder", target)
+
+        self.is_running = True
+        self.btn_run.config(state="disabled")
+        self.btn_stop.config(state="normal")
+        self.stop_event.clear()
+        self.log_text.config(state="normal")
+        self.log_text.delete(1.0, "end")
+        self.log_text.config(state="disabled")
+        
+        t = threading.Thread(target=self._worker, args=(Path(target),), daemon=True)
+        t.start()
+
+    def _stop_run(self):
+        if self.is_running:
+            self.stop_event.set()
+            self._log("🛑 Stopping... (Force Killing Fiji)")
+
+    def _worker(self, folder):
+        cmd = [str(FIJI), "-macro", str(MACRO_PATH), str(folder.resolve())]
+        self.after(0, lambda: self._log(f"🚀 Launching Fiji..."))
+
         try:
-            return json.loads(CONFIG_PATH.read_text())
-        except Exception:
-            pass
-    return {"last_input": str(PROJECT_ROOT)}
-
-def save_config(cfg: dict):
-    try:
-        CONFIG_PATH.write_text(json.dumps(cfg, indent=2))
-    except Exception:
-        pass
-
-def find_oir_files(root: Path):
-    for p in root.rglob("*"):
-        if p.is_file() and p.suffix.lower() == ".oir":
-            yield p
-
-def env_check():
-    if not FIJI or not FIJI.exists():
-        return False, (
-            "Fiji launcher not found. Expected one of:\n"
-            "  - /Applications/Fiji/fiji\n"
-            "  - /Applications/Fiji.app/Contents/MacOS/ImageJ-macosx"
-        )
-    if not has_mosaic():
-        return False, (
-            "MosaicSuite not found. Open Fiji → Help → Update… → Manage update sites… → "
-            "enable MOSAIC and Legacy/ImageJ → Apply & Restart."
-        )
-    return True, "OK"
-
-# ----------------------------- Runner -----------------------------
-
-class Runner:
-    def __init__(self, files, log, set_prog, done, cancel_event, skip_existing=True):
-        self.files = files
-        self.log = log
-        self.set_prog = set_prog
-        self.done = done
-        self.cancel = cancel_event      # <-- consistent name
-        self.skip_existing = skip_existing
-
-    def _run_one(self, oir: Path, idx: int, total: int):
-        if self.cancel.is_set():
-            return False
-
-        out_csv = oir.with_suffix(".csv")
-        if self.skip_existing and out_csv.exists():
-            self.log(f"[{idx}/{total}] SKIP (exists): {oir.name}")
-            self.set_prog(idx, total)
-            return True
-
-        # Use -macro (not -batch) so the macro controls timing and cleanup
-        arg = f"input='{oir.as_posix()}', output='{out_csv.as_posix()}'"
-        cmd = [str(FIJI), "-headless", "-batch", str(MACRO_PATH), arg]
-
-
-        self.log(f"[{idx}/{total}] RUN: {oir.name}")
-        self.log("CMD: " + " ".join(cmd))
-
-        try:
-            # Run Fiji silently; discard all output
             proc = subprocess.Popen(
-                cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, text=True
+                cmd, 
+                stdout=subprocess.PIPE, 
+                stderr=subprocess.STDOUT, 
+                text=True,
+                bufsize=1,
+                preexec_fn=os.setsid
             )
-            # Wait for Fiji to finish (with cancel support)
-            while proc.poll() is None:
-                if self.cancel.is_set():
-                    try:
-                        proc.terminate()
-                    except Exception:
-                        pass
+            
+            while True:
+                if self.stop_event.is_set():
+                    try: os.killpg(os.getpgid(proc.pid), signal.SIGKILL)
+                    except: pass
                     break
-                time.sleep(0.1)
 
-            if self.cancel.is_set():
-                self.log("Cancelled.")
-                return False
+                line = proc.stdout.readline()
+                if not line and proc.poll() is not None: break
+                
+                if line:
+                    clean = line.strip()
+                    # Emoji Filter
+                    if ">>>" in clean:
+                        clean_msg = clean.split(">>>")[1].strip()
+                        if "Processing" in clean_msg:
+                            clean_msg = "🔹 " + clean_msg
+                        elif "Done" in clean_msg:
+                            clean_msg = "✅ " + clean_msg
+                        elif "Error" in clean_msg:
+                            clean_msg = "❌ " + clean_msg
+                        elif "Skipped" in clean_msg:
+                            clean_msg = "⏭️ " + clean_msg
+                        self.after(0, lambda msg=clean_msg: self._log(msg))
 
-            # Filesystems (esp. OneDrive) can lag—poll briefly for the CSV to appear
-            if not out_csv.exists():
-                deadline = time.time() + 3.0  # up to ~3s settle time
-                while time.time() < deadline and not out_csv.exists():
-                    time.sleep(0.15)
+                if int(time.time() * 10) % 20 == 0: self._check_progress(folder)
 
-            # Success = CSV exists
-            if out_csv.exists():
-                self.log(f"SUCCESS → {out_csv.name}")
-            else:
-                rc = proc.returncode
-                self.log(f"ERROR (rc={rc}) → no CSV for {oir.name}")
-
-            self.set_prog(idx, total)
-            return True
+            self.after(0, lambda: self._log("🏁 Batch Finished."))
+            self._check_progress(folder)
 
         except Exception as e:
-            self.log(f"EXCEPTION: {e}")
-            self.set_prog(idx, total)
-            return True
+            self.after(0, lambda: self._log(f"❌ CRITICAL ERROR: {e}"))
 
+        finally:
+            self.after(0, self._reset_ui)
 
-    def run_all(self):
-        total = len(self.files)
-        for i, f in enumerate(self.files, 1):
-            if self.cancel.is_set():
-                break
-            self._run_one(f, i, total)
-        self.done()
+    def _check_progress(self, folder):
+        oirs = list(folder.rglob("*.oir"))
+        csvs = list(folder.rglob("*.csv"))
+        total = len(oirs)
+        done = len(csvs)
+        self.after(0, lambda: self._update_progress_gui(done, total))
 
-# ----------------------------- GUI -----------------------------
+    def _update_progress_gui(self, done, total):
+        if total > 0:
+            pct = (done / total) * 100
+            self.progress['value'] = pct
+            self.status_var.set(f"Processed: {done} / {total} ({int(pct)}%)")
 
-def main():
-    cfg = load_config()
-
-    sg.theme("SystemDefault")
-    layout = [
-        [sg.Text("Input folder"),
-         sg.Input(cfg.get("last_input", ""), key="-IN-", expand_x=True),
-         sg.FolderBrowse("Browse")],
-        [sg.Button("Scan for .oir", key="-SCAN-"),
-         sg.Button("Run", key="-RUN-", disabled=True),
-         sg.Button("Cancel", key="-CANCEL-", visible=False)],
-        [sg.ProgressBar(100, orientation="h", size=(40, 20), key="-PROG-")],
-        [sg.Multiline("", key="-LOG-", size=(100, 24), autoscroll=True, disabled=True)],
-    ]
-
-    win = sg.Window("Mosaic 2D Batch Runner", layout, finalize=True, resizable=True)
-
-    files = []
-    cancel_event = threading.Event()
-
-    def log(msg: str):
-        win["-LOG-"].update(value=str(msg) + "\n", append=True)
-
-    def set_prog(i, total):
-        pct = int(100 * i / max(1, total))
-        win["-PROG-"].update(pct)
-
-    def on_done():
-        win["-SCAN-"].update(disabled=False)
-        win["-RUN-"].update(disabled=False)
-        win["-CANCEL-"].update(visible=False)
-        log("Batch complete.")
-
-    def start_run():
-        win["-SCAN-"].update(disabled=True)
-        win["-RUN-"].update(disabled=True)
-        win["-CANCEL-"].update(visible=True)
-        cancel_event.clear()
-        threading.Thread(
-            target=Runner(files, log, set_prog, on_done, cancel_event, skip_existing=True).run_all,
-            daemon=True,
-        ).start()
-
-    ok, msg = env_check()
-    if not ok:
-        sg.popup_error("Environment problem:\n\n" + msg)
-
-    while True:
-        ev, vals = win.read(timeout=200)
-        if ev in (sg.WIN_CLOSED, None):
-            cancel_event.set()
-            break
-
-        if ev == "-SCAN-":
-            p = Path(vals["-IN-"]).expanduser()
-            if not p.exists():
-                sg.popup_error("Folder does not exist.")
-                continue
-            cfg["last_input"] = str(p)
-            save_config(cfg)
-            files = sorted(set(find_oir_files(p)))
-            log(f"Found {len(files)} .oir file(s).")
-            set_prog(0, max(1, len(files)))
-            win["-RUN-"].update(disabled=(len(files) == 0))
-
-        if ev == "-RUN-":
-            if not files:
-                sg.popup("Nothing to run. Click Scan first.")
-                continue
-            ok, msg = env_check()
-            if not ok:
-                sg.popup_error("Environment not ready:\n\n" + msg)
-                continue
-            start_run()
-
-        if ev == "-CANCEL-":
-            cancel_event.set()
-            log("Cancellation requested…")
-
-    win.close()
+    def _reset_ui(self):
+        self.is_running = False
+        self.btn_run.config(state="normal")
+        self.btn_stop.config(state="disabled")
 
 if __name__ == "__main__":
-    main()
+    app = MosaicApp()
+    app.mainloop()
