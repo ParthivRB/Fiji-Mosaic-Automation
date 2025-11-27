@@ -1,0 +1,4 @@
+([('MosaicAutomation',
+   '/Users/Parthiv/Documents/Med/Lab/Rohan Lab/Fiji Mosaic '
+   'Automation/dist/MosaicAutomation',
+   'EXECUTABLE')],)

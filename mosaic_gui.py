@@ -10,26 +10,32 @@ import os
 import json
 import signal
 
-# ---------------- CONFIGURATION ----------------
-if getattr(sys, 'frozen', False):
-    PROJECT_ROOT = Path(sys.executable).parent
-else:
-    PROJECT_ROOT = Path(__file__).parent.resolve()
+# --- UNIVERSAL RESOURCE HELPER ---
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
-MACRO_PATH = PROJECT_ROOT / "mosaic_batch.ijm"
-SETTINGS_FILE = PROJECT_ROOT / "settings.json"
+# --- CONFIGURATION ---
+MACRO_PATH = Path(resource_path("mosaic_batch.ijm"))
+# Save settings to User Home so it works on any computer (read/write safe)
+SETTINGS_FILE = Path.home() / ".mosaic_automation_settings.json"
 
+# Standard macOS locations for Fiji
 FIJI_CANDIDATES = [
     Path("/Applications/Fiji/fiji"),
     Path("/Applications/Fiji.app/Contents/MacOS/ImageJ-macosx"),
+    Path(str(Path.home() / "Applications/Fiji.app/Contents/MacOS/ImageJ-macosx"))
 ]
 
 def find_fiji():
     for p in FIJI_CANDIDATES:
         if p.exists(): return p
     return None
-
-FIJI = find_fiji()
 
 # ---------------- GUI CLASS ----------------
 class MosaicApp(tk.Tk):
@@ -41,6 +47,7 @@ class MosaicApp(tk.Tk):
         self.settings = self._load_settings()
         last_folder = self.settings.get("last_folder", "")
         last_workers = self.settings.get("worker_count", "3")
+        self.fiji_path = self.settings.get("fiji_path", "")
         
         self.folder_path = tk.StringVar(value=last_folder)
         self.worker_count_var = tk.StringVar(value=last_workers)
@@ -48,14 +55,12 @@ class MosaicApp(tk.Tk):
         self.is_running = False
         self.stop_event = threading.Event()
         self.active_procs = []
+        self.fiji_exe = self._locate_fiji()
         
         self._ui()
         
         if last_folder:
             self.after(500, lambda: self._scan_folder(Path(last_folder)))
-        
-        if not FIJI:
-            messagebox.showwarning("Fiji Missing", "Could not find Fiji in /Applications.")
 
     def _load_settings(self):
         if SETTINGS_FILE.exists():
@@ -67,6 +72,15 @@ class MosaicApp(tk.Tk):
         self.settings[key] = value
         try: SETTINGS_FILE.write_text(json.dumps(self.settings, indent=2))
         except: pass
+
+    def _locate_fiji(self):
+        # Check saved path
+        if self.fiji_path and Path(self.fiji_path).exists():
+            return Path(self.fiji_path)
+        # Check standard paths
+        auto = find_fiji()
+        if auto: return auto
+        return None
 
     def _ui(self):
         main_frame = ttk.Frame(self, padding="20")
@@ -84,8 +98,7 @@ class MosaicApp(tk.Tk):
         ttk.Label(setting_frame, text="Parallel Workers:").pack(side="left", padx=(0, 10))
         wc_combo = ttk.Combobox(setting_frame, textvariable=self.worker_count_var, values=["1", "2", "3", "4"], width=5, state="readonly")
         wc_combo.pack(side="left")
-        
-        # REMOVED the text label here as requested
+        ttk.Button(setting_frame, text="Locate Fiji App", command=self._ask_fiji).pack(side="right")
 
         # Progress
         prog_frame = ttk.LabelFrame(main_frame, text="Progress", padding="10")
@@ -114,8 +127,15 @@ class MosaicApp(tk.Tk):
         self.log_text.pack(fill="both", expand=True)
         scrollbar.config(command=self.log_text.yview)
 
+    def _ask_fiji(self):
+        path = filedialog.askopenfilename(title="Select Fiji Executable (inside Fiji.app/Contents/MacOS/)")
+        if path:
+            self.fiji_exe = Path(path)
+            self._save_setting("fiji_path", path)
+            messagebox.showinfo("Success", "Fiji path updated.")
+
     def _browse(self):
-        start_dir = self.folder_path.get() if os.path.exists(self.folder_path.get()) else "/"
+        start_dir = self.folder_path.get() if os.path.exists(self.folder_path.get()) else str(Path.home())
         p = filedialog.askdirectory(initialdir=start_dir)
         if p:
             self.folder_path.set(p)
@@ -137,7 +157,13 @@ class MosaicApp(tk.Tk):
 
     def _start_run(self):
         target = self.folder_path.get()
-        if not target or not FIJI: return
+        if not target: return
+        if not self.fiji_exe or not self.fiji_exe.exists():
+            self.fiji_exe = self._locate_fiji()
+            if not self.fiji_exe:
+                messagebox.showerror("Error", "Fiji not found. Please click 'Locate Fiji App'.")
+                return
+
         self._save_setting("last_folder", target)
         self._save_setting("worker_count", self.worker_count_var.get())
 
@@ -155,13 +181,13 @@ class MosaicApp(tk.Tk):
     def _stop_run(self):
         if self.is_running:
             self.stop_event.set()
-            self._log("🛑 Stopping all workers... (Force Kill)")
+            self._log("🛑 Stopping...")
 
     def _manager_lifecycle(self, folder):
         num_workers = int(self.worker_count_var.get())
         
-        # --- PHASE 1: INITIAL RUN ---
-        self.after(0, lambda: self._log(f"🚀 Starting Phase 1: Main Batch ({num_workers} workers)"))
+        # --- PHASE 1 ---
+        self.after(0, lambda: self._log(f"🚀 Phase 1: Processing ({num_workers} workers)..."))
         self._run_worker_group(folder, num_workers)
         self._kill_all()
 
@@ -169,24 +195,20 @@ class MosaicApp(tk.Tk):
             self.after(0, self._reset_ui)
             return
 
-        # --- CHECK FAILURES ---
+        # --- CHECK & RETRY ---
         failed_count = self._count_missing(folder)
-        
         if failed_count > 0:
-            self.after(0, lambda: self._log(f"⚠️ Phase 1 complete. Found {failed_count} failed files."))
-            self.after(0, lambda: self._log(f"🔄 Starting Phase 2: Retry Queue..."))
-            
-            # --- PHASE 2: RETRY RUN ---
+            self.after(0, lambda: self._log(f"⚠️ Found {failed_count} missing files. Retrying..."))
             self._run_worker_group(folder, num_workers)
             self._kill_all()
             
             final_fail = self._count_missing(folder)
             if final_fail > 0:
-                self.after(0, lambda: self._log(f"❌ Finished with {final_fail} errors remaining."))
+                self.after(0, lambda: self._log(f"❌ Finished with {final_fail} errors."))
             else:
-                self.after(0, lambda: self._log(f"✅ Retry successful. All files processed."))
+                self.after(0, lambda: self._log(f"✅ All files processed successfully."))
         else:
-            self.after(0, lambda: self._log(f"✨ Perfect Run. No retries needed."))
+            self.after(0, lambda: self._log(f"✨ Success! 100% Complete."))
 
         self.after(0, self._reset_ui)
 
@@ -207,12 +229,28 @@ class MosaicApp(tk.Tk):
             t.start()
             threads.append(t)
 
+        # Monitor loop
+        complete_cycles = 0
         while any(t.is_alive() for t in threads):
             if self.stop_event.is_set():
                 self._kill_all()
                 break
+            
+            # Check progress every 2 seconds
             if int(time.time() * 10) % 20 == 0: 
-                self._check_progress(folder)
+                done, total = self._check_progress(folder)
+                
+                # AUTO-SHUTDOWN LOGIC
+                # If 100% done, we wait 2 checks (approx 4s) then force kill
+                if total > 0 and done == total:
+                    complete_cycles += 1
+                    if complete_cycles >= 2:
+                        self.after(0, lambda: self._log("✅ 100% Detected. Cleaning up workers..."))
+                        self._kill_all()
+                        break
+                else:
+                    complete_cycles = 0 # Reset if not 100%
+
             time.sleep(0.5)
         
         self._check_progress(folder)
@@ -220,39 +258,22 @@ class MosaicApp(tk.Tk):
     def _worker_subprocess(self, folder, worker_id):
         seed = int(time.time() + worker_id * 1000)
         arg_string = f"{folder.resolve()}|{seed}"
-        cmd = [str(FIJI), "-macro", str(MACRO_PATH), arg_string]
+        cmd = [str(self.fiji_exe), "-macro", str(MACRO_PATH), arg_string]
 
         try:
-            proc = subprocess.Popen(
-                cmd, 
-                stdout=subprocess.PIPE, 
-                stderr=subprocess.STDOUT, 
-                text=True,
-                bufsize=1,
-                preexec_fn=os.setsid
-            )
+            proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1, preexec_fn=os.setsid)
             self.active_procs.append(proc)
-            
             while True:
                 line = proc.stdout.readline()
                 if not line and proc.poll() is not None: break
-                
                 if line and ">>>" in line:
                     clean = line.strip().split(">>>")[1].strip()
-                    if "Processing" in clean:
-                        msg = f"🔹 [W{worker_id+1}] {clean}"
-                    elif "Done" in clean:
-                        msg = f"✅ [W{worker_id+1}] {clean}"
-                    elif "Error" in clean:
-                        msg = f"❌ [W{worker_id+1}] {clean}"
-                    else:
-                        msg = f"ℹ️ [W{worker_id+1}] {clean}"
-                    
-                    if "Skipped" not in clean:
-                        self.after(0, lambda m=msg: self._log(m))
-
-        except Exception:
-            pass 
+                    if "Processing" in clean: msg = f"🔹 [W{worker_id+1}] {clean}"
+                    elif "Done" in clean: msg = f"✅ [W{worker_id+1}] {clean}"
+                    elif "Error" in clean: msg = f"❌ [W{worker_id+1}] {clean}"
+                    else: msg = f"ℹ️ [W{worker_id+1}] {clean}"
+                    if "Skipped" not in clean: self.after(0, lambda m=msg: self._log(m))
+        except Exception: pass 
 
     def _kill_all(self):
         for proc in self.active_procs:
@@ -266,6 +287,7 @@ class MosaicApp(tk.Tk):
         total = len(oirs)
         done = len(csvs)
         self.after(0, lambda: self._update_progress_gui(done, total))
+        return done, total # Return values for logic
 
     def _update_progress_gui(self, done, total):
         if total > 0:
