@@ -12,20 +12,16 @@ import signal
 
 # --- UNIVERSAL RESOURCE HELPER ---
 def resource_path(relative_path):
-    """ Get absolute path to resource, works for dev and for PyInstaller """
     try:
-        # PyInstaller creates a temp folder and stores path in _MEIPASS
         base_path = sys._MEIPASS
     except Exception:
-        base_path = os.path.abspath(".")
+        base_path = os.path.dirname(os.path.abspath(__file__))
     return os.path.join(base_path, relative_path)
 
 # --- CONFIGURATION ---
 MACRO_PATH = Path(resource_path("mosaic_batch.ijm"))
-# Save settings to User Home so it works on any computer (read/write safe)
 SETTINGS_FILE = Path.home() / ".mosaic_automation_settings.json"
 
-# Standard macOS locations for Fiji
 FIJI_CANDIDATES = [
     Path("/Applications/Fiji/fiji"),
     Path("/Applications/Fiji.app/Contents/MacOS/ImageJ-macosx"),
@@ -74,10 +70,8 @@ class MosaicApp(tk.Tk):
         except: pass
 
     def _locate_fiji(self):
-        # Check saved path
         if self.fiji_path and Path(self.fiji_path).exists():
             return Path(self.fiji_path)
-        # Check standard paths
         auto = find_fiji()
         if auto: return auto
         return None
@@ -128,7 +122,7 @@ class MosaicApp(tk.Tk):
         scrollbar.config(command=self.log_text.yview)
 
     def _ask_fiji(self):
-        path = filedialog.askopenfilename(title="Select Fiji Executable (inside Fiji.app/Contents/MacOS/)")
+        path = filedialog.askopenfilename(title="Select Fiji Executable")
         if path:
             self.fiji_exe = Path(path)
             self._save_setting("fiji_path", path)
@@ -144,10 +138,10 @@ class MosaicApp(tk.Tk):
 
     def _scan_folder(self, folder):
         if not folder.exists(): return
-        oirs = list(folder.rglob("*.oir"))
-        csvs = list(folder.rglob("*.csv"))
-        self.status_var.set(f"Found {len(oirs)} .oir files ({len(csvs)} already processed).")
-        self._log(f"📂 Ready: {len(oirs)} files found.")
+        # Use strict counting logic here too
+        done, total = self._check_progress(folder)
+        self.status_var.set(f"Found {total} .oir files ({done} already processed).")
+        self._log(f"📂 Ready: {total} files found.")
 
     def _log(self, msg):
         self.log_text.config(state="normal")
@@ -161,7 +155,7 @@ class MosaicApp(tk.Tk):
         if not self.fiji_exe or not self.fiji_exe.exists():
             self.fiji_exe = self._locate_fiji()
             if not self.fiji_exe:
-                messagebox.showerror("Error", "Fiji not found. Please click 'Locate Fiji App'.")
+                messagebox.showerror("Error", "Fiji not found.")
                 return
 
         self._save_setting("last_folder", target)
@@ -186,6 +180,18 @@ class MosaicApp(tk.Tk):
     def _manager_lifecycle(self, folder):
         num_workers = int(self.worker_count_var.get())
         
+        # Validate file count first
+        done, total = self._check_progress(folder)
+        if total == 0:
+            self.after(0, lambda: self._log("⚠️ No .oir files found in this folder!"))
+            self.after(0, self._reset_ui)
+            return
+        
+        if done == total:
+             self.after(0, lambda: self._log("✨ All files already processed!"))
+             self.after(0, self._reset_ui)
+             return
+
         # --- PHASE 1 ---
         self.after(0, lambda: self._log(f"🚀 Phase 1: Processing ({num_workers} workers)..."))
         self._run_worker_group(folder, num_workers)
@@ -196,13 +202,17 @@ class MosaicApp(tk.Tk):
             return
 
         # --- CHECK & RETRY ---
-        failed_count = self._count_missing(folder)
+        done, total = self._check_progress(folder)
+        failed_count = total - done
+        
         if failed_count > 0:
             self.after(0, lambda: self._log(f"⚠️ Found {failed_count} missing files. Retrying..."))
             self._run_worker_group(folder, num_workers)
             self._kill_all()
             
-            final_fail = self._count_missing(folder)
+            final_done, final_total = self._check_progress(folder)
+            final_fail = final_total - final_done
+            
             if final_fail > 0:
                 self.after(0, lambda: self._log(f"❌ Finished with {final_fail} errors."))
             else:
@@ -211,14 +221,6 @@ class MosaicApp(tk.Tk):
             self.after(0, lambda: self._log(f"✨ Success! 100% Complete."))
 
         self.after(0, self._reset_ui)
-
-    def _count_missing(self, folder):
-        oirs = list(folder.rglob("*.oir"))
-        missing = 0
-        for oir in oirs:
-            csv = oir.with_suffix(".csv")
-            if not csv.exists(): missing += 1
-        return missing
 
     def _run_worker_group(self, folder, num_workers):
         self.active_procs = []
@@ -236,20 +238,18 @@ class MosaicApp(tk.Tk):
                 self._kill_all()
                 break
             
-            # Check progress every 2 seconds
             if int(time.time() * 10) % 20 == 0: 
                 done, total = self._check_progress(folder)
                 
                 # AUTO-SHUTDOWN LOGIC
-                # If 100% done, we wait 2 checks (approx 4s) then force kill
                 if total > 0 and done == total:
                     complete_cycles += 1
-                    if complete_cycles >= 2:
-                        self.after(0, lambda: self._log("✅ 100% Detected. Cleaning up workers..."))
+                    if complete_cycles >= 3: # Wait ~6s to be sure
+                        self.after(0, lambda: self._log("✅ 100% Detected. Cleaning up..."))
                         self._kill_all()
                         break
                 else:
-                    complete_cycles = 0 # Reset if not 100%
+                    complete_cycles = 0
 
             time.sleep(0.5)
         
@@ -282,12 +282,18 @@ class MosaicApp(tk.Tk):
                 except: pass
 
     def _check_progress(self, folder):
-        oirs = list(folder.rglob("*.oir"))
-        csvs = list(folder.rglob("*.csv"))
-        total = len(oirs)
-        done = len(csvs)
+        # STRICT CHECK: Only count done if the specific CSV exists for the OIR
+        files = [p for p in folder.rglob("*") if p.suffix.lower() == ".oir"]
+        total = len(files)
+        done = 0
+        for f in files:
+            # Check for matching CSV (with same basename)
+            target_csv = f.with_suffix(".csv")
+            if target_csv.exists():
+                done += 1
+        
         self.after(0, lambda: self._update_progress_gui(done, total))
-        return done, total # Return values for logic
+        return done, total
 
     def _update_progress_gui(self, done, total):
         if total > 0:

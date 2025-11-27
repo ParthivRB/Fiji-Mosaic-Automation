@@ -1,5 +1,5 @@
 /*
- * Mosaic 2D Batch - Randomized & Self-Terminating
+ * Mosaic 2D Batch - Flattened List Strategy
  * Arguments: "FolderPath|RandomSeed"
  */
 
@@ -27,12 +27,55 @@ random("seed", seed);
 
 echo(">>> Worker Started");
 
-processFolder(root);
+// 1. Build a massive flat list of ALL files first (Solves recursion bug)
+allFiles = getAllFiles(root);
+count = allFiles.length;
 
-// FORCE QUIT JAVA: This ensures the process actually dies so Python knows we are done.
+if (count == 0) {
+    echo(">>> Error: No OIR files found.");
+    eval("script", "System.exit(0);");
+}
+
+// 2. Shuffle the flat list
+randoms = newArray(count);
+for (k=0; k<count; k++) randoms[k] = random();
+
+for (i=0; i<count; i++) {
+    for (j=1; j<count-i; j++) {
+        if (randoms[j-1] > randoms[j]) {
+            t = randoms[j-1]; randoms[j-1] = randoms[j]; randoms[j] = t;
+            tStr = allFiles[j-1]; allFiles[j-1] = allFiles[j]; allFiles[j] = tStr;
+        }
+    }
+}
+
+// 3. Process the shuffled list
+for (i = 0; i < count; i++) {
+    processFile(allFiles[i]);
+}
+
+// Force Quit
 eval("script", "System.exit(0);");
 
 // ---------------------------------------------------------
+
+// Recursive crawler that returns a flat array of file paths
+function getAllFiles(dir) {
+    fileList = newArray(0);
+    list = getFileList(dir);
+    
+    for (i = 0; i < list.length; i++) {
+        if (endsWith(list[i], "/")) {
+            // Recurse
+            subList = getAllFiles(dir + list[i]);
+            fileList = Array.concat(fileList, subList);
+        } else if (endsWith(toLowerCase(list[i]), ".oir")) {
+            // Add full path
+            fileList = Array.concat(fileList, dir + list[i]);
+        }
+    }
+    return fileList;
+}
 
 function echo(msg) {
     js = "System.out.println(\"" + msg + "\");";
@@ -45,46 +88,14 @@ function closeLogWindow() {
     if (isOpen("Exception")) { selectWindow("Exception"); run("Close"); }
 }
 
-function processFolder(dir) {
-    list = getFileList(dir);
-    
-    // --- RANDOM SHUFFLE ---
-    count = list.length;
-    randoms = newArray(count);
-    for (k=0; k<count; k++) {
-        randoms[k] = random();
-    }
-    
-    for (i=0; i<count; i++) {
-        for (j=1; j<count-i; j++) {
-            if (randoms[j-1] > randoms[j]) {
-                t = randoms[j-1];
-                randoms[j-1] = randoms[j];
-                randoms[j] = t;
-                tStr = list[j-1];
-                list[j-1] = list[j];
-                list[j] = tStr;
-            }
-        }
-    }
-    // ---------------------------
-
-    for (i = 0; i < list.length; i++) {
-        item = list[i];
-        path = dir + item;
-        
-        if (endsWith(item, File.separator)) {
-            processFolder(path);
-        } else if (endsWith(toLowerCase(item), ".oir")) {
-            processFile(dir, item);
-        }
-    }
-}
-
-function processFile(dir, filename) {
+function processFile(fullPath) {
     closeLogWindow();
     
-    inputPath = dir + filename;
+    // Extract directory and filename from full path
+    lastSlash = lastIndexOf(fullPath, File.separator);
+    dir = substring(fullPath, 0, lastSlash + 1);
+    filename = substring(fullPath, lastSlash + 1);
+    
     dotIndex = lastIndexOf(filename, ".");
     baseName = substring(filename, 0, dotIndex);
     finalCSV = dir + baseName + ".csv";
@@ -93,14 +104,13 @@ function processFile(dir, filename) {
 
     echo(">>> Processing: " + filename);
     
-    run("Bio-Formats Importer", "open=[" + inputPath + "] autoscale color_mode=Default rois_import=[ROI manager] view=Hyperstack stack_order=XYCZT windowless=true");
+    run("Bio-Formats Importer", "open=[" + fullPath + "] autoscale color_mode=Default rois_import=[ROI manager] view=Hyperstack stack_order=XYCZT windowless=true");
     closeLogWindow();
     setOption("Changes", false);
 
     run("Particle Tracker 2D/3D", "radius=3 cutoff=0.001 percentile=0.5 link=2 displacement=10 dynamics=Brownian");
     closeLogWindow();
 
-    // Wait for Output (120s timeout)
     tEnd = getTime() + 120000; 
     found = false;
     target = "";
